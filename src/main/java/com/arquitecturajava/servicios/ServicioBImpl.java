@@ -2,20 +2,22 @@ package com.arquitecturajava.servicios;
 
 public class ServicioBImpl implements ServicioB {
 
+	private ServicioA servicioA;
+
 	public ServicioA getServicioA() {
-		return null;
+		return servicioA;
 	}
 
 	public void setServicioA(ServicioA servicioA) {
-
+		this.servicioA = servicioA;
 	}
 
 	public int multiplicarSumar(int a, int b, int multiplicador) {
-		return 0;
+		return servicioA.sumar(a, b) * multiplicador;
 	}
 
 	public int multiplicar(int a, int b) {
-		return 0;
+		return a * b;
 	}
 
 }
